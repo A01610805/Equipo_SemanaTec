@@ -26,6 +26,7 @@ ghosts = [
     [vector(100, -160), vector(-5, 0)],
 ]
 # fmt: off
+#Este es el tablero; 1=azul, 0=negro.
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
@@ -154,6 +155,7 @@ def move():
         if abs(pacman - point) < 20:
             return
 
+            #Aquí se modifica la velocidad de movimiento, al reducir el refresh-rate.
     ontimer(move, 10)
 
 
